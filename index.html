@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Zheyuan Ou — Software Developer</title>
+    <meta
+      name="description"
+      content="Zheyuan Ou is a software developer in Vancouver finishing a BSc in Computing Science at Simon Fraser University. Full-stack TypeScript systems, built and run in production."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Zheyuan Ou — Software Developer" />
+    <meta
+      property="og:description"
+      content="Full-stack TypeScript systems, built and run in production. Graduating from Simon Fraser University in April 2027."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/site.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="intro row">
+        <div class="row-body">
+          <h1>Zheyuan Ou</h1>
+          <p class="lede">
+            Software developer. I build full-stack TypeScript systems and run
+            them in production: bookkeeping software used across 13 retail
+            stores, and a paid listen-later service on Cloudflare Workers.
+          </p>
+          <ul class="facts">
+            <li>Vancouver, BC</li>
+            <li>
+              BSc in Computing Science, Simon Fraser University, graduating
+              April 2027
+            </li>
+            <li>Looking for a full-time software role from May 2027</li>
+          </ul>
+          <p class="actions">
+            <a class="button" href="https://github.com/Atune-D">
+              GitHub <span aria-hidden="true">↗</span>
+            </a>
+          </p>
+        </div>
+      </header>
+
+      <main>
+        <section class="section row work" aria-labelledby="websites">
+          <h2 id="websites">Websites</h2>
+          <ul class="work-grid">
+            <li class="work-item">
+              <a class="work-link" href="https://www.toaudio.app/">
+                <img
+                  src="images/sites/toaudio-1440.webp"
+                  srcset="
+                    images/sites/toaudio-800.webp   800w,
+                    images/sites/toaudio-1440.webp 1440w
+                  "
+                  sizes="(min-width: 52rem) 832px, calc(100vw - 3rem)"
+                  width="1440"
+                  height="900"
+                  alt=""
+                  decoding="async"
+                />
+                <span class="work-caption">
+                  <span class="work-text">
+                    <span class="work-name">toaudio</span>
+                    <span class="work-desc">Article-to-audio service</span>
+                  </span>
+                  <span class="work-url"
+                    >toaudio.app <span aria-hidden="true">↗</span></span
+                  >
+                </span>
+              </a>
+            </li>
+            <li class="work-item">
+              <a class="work-link" href="https://www.tiendaops.com/">
+                <img
+                  src="images/sites/tiendaops-800.webp"
+                  srcset="
+                    images/sites/tiendaops-800.webp   800w,
+                    images/sites/tiendaops-1440.webp 1440w
+                  "
+                  sizes="(min-width: 52rem) 400px, (min-width: 40rem) calc(50vw - 2.5rem), calc(100vw - 3rem)"
+                  width="1440"
+                  height="900"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="work-caption">
+                  <span class="work-text">
+                    <span class="work-name">TiendaOps</span>
+                    <span class="work-desc"
+                      >Shift reconciliation for retail stores in Mexico</span
+                    >
+                  </span>
+                  <span class="work-url"
+                    >tiendaops.com <span aria-hidden="true">↗</span></span
+                  >
+                </span>
+              </a>
+            </li>
+            <li class="work-item">
+              <a class="work-link" href="https://www.repmates.com/">
+                <img
+                  src="images/sites/repmates-800.webp"
+                  srcset="
+                    images/sites/repmates-800.webp   800w,
+                    images/sites/repmates-1440.webp 1440w
+                  "
+                  sizes="(min-width: 52rem) 400px, (min-width: 40rem) calc(50vw - 2.5rem), calc(100vw - 3rem)"
+                  width="1440"
+                  height="900"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="work-caption">
+                  <span class="work-text">
+                    <span class="work-name">Repmates</span>
+                    <span class="work-desc">Voice workout tracking</span>
+                  </span>
+                  <span class="work-url"
+                    >repmates.com <span aria-hidden="true">↗</span></span
+                  >
+                </span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="section row" aria-labelledby="experience">
+          <h2 id="experience">Experience</h2>
+          <div class="row-body">
+            <article class="entry">
+              <div class="entry-head">
+                <div class="entry-title">
+                  <h3>TiendaOps</h3>
+                  <a href="https://tiendaops.com">tiendaops.com</a>
+                </div>
+                <p class="entry-dates">Sept 2026 – Present</p>
+              </div>
+              <p class="entry-meta">
+                Software Developer · Playa del Carmen, Mexico (Remote)
+              </p>
+              <ul>
+                <li>
+                  Reduced weekly bookkeeping time by about 30% across 13 retail
+                  stores as sole developer of a TypeScript system that replaced
+                  Excel-based shift closing, cash reconciliation, and payroll
+                  deductions.
+                </li>
+                <li>
+                  Built read-only connectors for 2 legacy point-of-sale
+                  databases (Access, Firebird), validated in 3 on-site tests on
+                  live systems with no raw sales data leaving the store.
+                </li>
+                <li>
+                  Implemented idempotent, versioned batch writes so retries and
+                  lost responses never double-post.
+                </li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <div class="entry-head">
+                <div class="entry-title">
+                  <h3>Nextlab</h3>
+                </div>
+                <p class="entry-dates">Jan 2025 – Aug 2025</p>
+              </div>
+              <p class="entry-meta">
+                Software Engineer Intern (Backend &amp; Data Systems) ·
+                Vancouver, BC
+              </p>
+              <ul>
+                <li>
+                  Built semantic search over email threads using OpenAI
+                  embeddings and vector indexes, surfacing relevant threads in
+                  large, noisy mailboxes.
+                </li>
+                <li>
+                  Built Python and TypeScript pipelines that parse, thread,
+                  deduplicate, and normalize email from multiple providers
+                  before indexing.
+                </li>
+                <li>
+                  Developed REST APIs in Python (Masonite) on PostgreSQL, using
+                  Redis for asynchronous processing.
+                </li>
+                <li>
+                  Wrote CLI tools and validation scripts to check data quality
+                  and speed up debugging.
+                </li>
+                <li>
+                  Wrote API documentation and setup guides that let new
+                  developers run the project locally.
+                </li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <div class="entry-head">
+                <div class="entry-title">
+                  <h3>Simon Fraser University</h3>
+                </div>
+                <p class="entry-dates">June 2024 – Sept 2024</p>
+              </div>
+              <p class="entry-meta">
+                Undergraduate Research Assistant · Burnaby, BC
+              </p>
+              <ul>
+                <li>
+                  Conducted a feasibility study on embedding optical fibres in
+                  wood to sense touch, analyzing about 250 microscope
+                  measurements across laser power, speed, and thickness.
+                </li>
+                <li>
+                  Traced non-reproducible hole sizes to laser-tube power decay
+                  and documented the failure modes.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section row" aria-labelledby="projects">
+          <h2 id="projects">Projects</h2>
+          <div class="row-body">
+            <article class="entry">
+              <div class="entry-head">
+                <div class="entry-title">
+                  <h3>toaudio</h3>
+                  <a href="https://toaudio.app">toaudio.app</a>
+                </div>
+              </div>
+              <p class="entry-meta">
+                TypeScript, Bun, Hono, Cloudflare Workers, React, Stripe
+              </p>
+              <ul>
+                <li>
+                  Launched a listen-later service that converts web articles to
+                  audio, with a paid plan live in 3 weeks.
+                </li>
+                <li>
+                  Designed the database schema across 20 migrations, including
+                  a race-free quota check in a single SQL statement.
+                </li>
+                <li>
+                  Implemented a job executor that resumes after container
+                  sleep, using leased claims with a guard on every write.
+                </li>
+                <li>
+                  Wrote unit and integration tests (149 test files) that run
+                  against local database and storage emulation.
+                </li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <div class="entry-head">
+                <div class="entry-title">
+                  <h3>Repmates</h3>
+                  <a href="https://repmates.com">repmates.com</a>
+                </div>
+              </div>
+              <p class="entry-meta">Swift, React, Hono, Zod</p>
+              <ul>
+                <li>
+                  Built mobile-first workout logging and metrics views in
+                  React, from Figma prototype to production.
+                </li>
+                <li>
+                  Integrated Whisper speech transcription with confidence
+                  thresholds and timestamp alignment.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section row" aria-labelledby="skills">
+          <h2 id="skills">Skills</h2>
+          <dl class="row-body skills">
+            <div>
+              <dt>Languages</dt>
+              <dd>TypeScript, JavaScript, Python, SQL, Swift, C, C++</dd>
+            </div>
+            <div>
+              <dt>Technologies</dt>
+              <dd>
+                React, Node.js, Bun, Hono, Cloudflare Workers, PostgreSQL,
+                SQLite, Drizzle, Zod, Docker
+              </dd>
+            </div>
+            <div>
+              <dt>Tools</dt>
+              <dd>Git, Figma, Claude Code</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="section row" aria-labelledby="education">
+          <h2 id="education">Education</h2>
+          <div class="row-body">
+            <article class="entry">
+              <div class="entry-head">
+                <div class="entry-title">
+                  <h3>Simon Fraser University</h3>
+                </div>
+                <p class="entry-dates">Expected Apr 2027</p>
+              </div>
+              <p class="entry-meta">Bachelor of Science in Computing Science</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer row">
+        <div class="row-body">
+          <p>© 2026 Zheyuan Ou</p>
+          <p><a href="https://github.com/Atune-D">github.com/Atune-D</a></p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

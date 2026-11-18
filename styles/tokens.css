@@ -1,0 +1,61 @@
+/*
+ * Design tokens — the only place colour, radius, size and spacing values live.
+ * site.css and the HTML must reference these and never use literals
+ * (tests/conformance.test.mjs enforces it).
+ *
+ * Decisions (2026-11-17):
+ * - Light only. The site does not follow the visitor's dark mode.
+ * - One accent colour, used for links and focus rings. Everything else is neutral.
+ * - System font stack. No font files, no third-party requests.
+ */
+:root {
+  /* Colour: cool neutrals, one ink, one accent */
+  --color-page: #ffffff;
+  --color-ink: #111827; /* headings, body text, the one solid button */
+  --color-ink-soft: #374151; /* hover state of the solid button */
+  --color-text-secondary: #4b5563; /* readable secondary text, 7.5:1 on the page */
+  --color-rule: #e5e7eb; /* hairlines only, never text */
+  --color-accent: #1d4ed8; /* links and focus rings, 6.7:1 on the page */
+  --color-on-ink: #ffffff;
+
+  /* Shape */
+  --radius-control: 8px;
+  --radius-media: 8px; /* website screenshots */
+  --rule-width: 1px;
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 3px;
+
+  /* Type */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  --text-display: clamp(2.5rem, 1.9rem + 3vw, 3.5rem);
+  --text-lede: clamp(1.125rem, 1.05rem + 0.4vw, 1.25rem);
+  --text-body: 1.0625rem;
+  --text-small: 0.9375rem;
+  --leading-display: 1.08;
+  --leading-body: 1.65;
+  --tracking-display: -0.025em;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Layout */
+  --page-gutter: 1.5rem;
+  --measure: 40rem; /* reading column */
+  --label-column: 10rem; /* hanging section labels on wide screens */
+  --column-gap: 2rem;
+  --space-hero-top: clamp(3.5rem, 2rem + 8vw, 7rem);
+  --space-section: clamp(3.5rem, 3rem + 2vw, 4.5rem);
+  --space-section-inner: 1.5rem;
+  --space-entry: 2.5rem;
+  --space-block: 1.5rem;
+  --space-tight: 0.75rem;
+  --space-list-item: 0.375rem;
+  --control-height: 2.75rem; /* 44px touch target */
+  --control-padding: 1.125rem;
+  --hit-padding: 0.875rem; /* extends small text links to a 44px hit area */
+
+  /* Motion */
+  --duration-micro: 200ms;
+}

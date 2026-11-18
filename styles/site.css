@@ -1,0 +1,335 @@
+/* Single-column, type-led page. All values come from tokens.css. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  font-weight: var(--weight-regular);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+dl,
+dd {
+  margin: 0;
+}
+
+/* ---------- Links and focus ---------- */
+
+a {
+  color: var(--color-accent);
+  font-weight: var(--weight-medium);
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: var(--rule-width);
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color var(--duration-micro) ease;
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-accent);
+  outline-offset: var(--focus-ring-offset);
+  border-radius: var(--radius-control);
+}
+
+/* ---------- Page frame ---------- */
+
+.page {
+  max-width: calc(
+    var(--label-column) + var(--column-gap) + var(--measure) +
+      2 * var(--page-gutter)
+  );
+  margin-inline: auto;
+  padding-inline: var(--page-gutter);
+}
+
+/* A hanging label column on the left, the reading column on the right. */
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 52rem) {
+  .row {
+    grid-template-columns: var(--label-column) minmax(0, var(--measure));
+    column-gap: var(--column-gap);
+  }
+
+  .row > .row-body {
+    grid-column: 2;
+  }
+}
+
+/* ---------- Intro ---------- */
+
+.intro {
+  padding-top: var(--space-hero-top);
+}
+
+.intro h1 {
+  font-size: var(--text-display);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+  font-weight: var(--weight-bold);
+}
+
+.intro .lede {
+  margin-top: var(--space-block);
+  font-size: var(--text-lede);
+  text-wrap: pretty;
+}
+
+.intro .facts {
+  margin-top: var(--space-block);
+  padding: 0;
+  list-style: none;
+  color: var(--color-text-secondary);
+}
+
+.intro .actions {
+  margin-top: var(--space-block);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  min-height: var(--control-height);
+  padding-inline: var(--control-padding);
+  border-radius: var(--radius-control);
+  background: var(--color-ink);
+  color: var(--color-on-ink);
+  font-size: var(--text-small);
+  font-weight: var(--weight-medium);
+  text-decoration-line: none;
+  transition: background-color var(--duration-micro) ease;
+}
+
+.button:hover {
+  background: var(--color-ink-soft);
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+  margin-top: var(--space-section);
+  padding-top: var(--space-section-inner);
+  border-top: var(--rule-width) solid var(--color-rule);
+}
+
+.section > h2 {
+  font-size: var(--text-small);
+  line-height: var(--leading-body);
+  font-weight: var(--weight-semibold);
+  margin-bottom: var(--space-section-inner);
+}
+
+@media (min-width: 52rem) {
+  .section > h2 {
+    margin-bottom: 0;
+    /* Sit on the first text baseline of the reading column. */
+    padding-top: calc(
+      (var(--text-body) - var(--text-small)) * var(--leading-body) / 2
+    );
+  }
+}
+
+/* ---------- Websites gallery ---------- */
+
+/* The gallery spans both columns: the label sits on its own row above it. */
+.work > h2 {
+  margin-bottom: var(--space-section-inner);
+}
+
+.work-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-entry) var(--column-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 40rem) {
+  .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Three sites: the first runs full width, the other two share a row. */
+  .work-item:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+.work-link {
+  display: block;
+  color: inherit;
+  font-weight: var(--weight-regular);
+  text-decoration-line: none;
+}
+
+.work-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: var(--rule-width) solid var(--color-rule);
+  border-radius: var(--radius-media);
+}
+
+/* Name and URL share the first line at any width; the description runs below. */
+.work-caption {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  column-gap: var(--column-gap);
+  margin-top: var(--space-tight);
+}
+
+.work-text {
+  display: contents;
+}
+
+.work-name {
+  grid-column: 1;
+  grid-row: 1;
+  font-weight: var(--weight-semibold);
+}
+
+.work-desc {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+}
+
+.work-url {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: var(--text-small);
+  font-weight: var(--weight-medium);
+  color: var(--color-accent);
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: var(--rule-width);
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color var(--duration-micro) ease;
+}
+
+.work-link:hover .work-url {
+  text-decoration-color: currentColor;
+}
+
+/* ---------- Entries (jobs, projects, education) ---------- */
+
+.entry + .entry {
+  margin-top: var(--space-entry);
+}
+
+.entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  column-gap: var(--column-gap);
+}
+
+/* The heading and its link stay inline so the link's padding cannot grow the row. */
+.entry-title h3 {
+  display: inline;
+  margin-right: var(--space-tight);
+  font-size: var(--text-body);
+  font-weight: var(--weight-semibold);
+}
+
+.entry-title a {
+  font-size: var(--text-small);
+}
+
+/* Small text links get a taller hit area without moving lines or the focus ring. */
+.entry-title a,
+.site-footer a {
+  position: relative;
+}
+
+.entry-title a::after,
+.site-footer a::after {
+  content: "";
+  position: absolute;
+  inset: calc(-1 * var(--hit-padding)) 0;
+}
+
+.entry-dates {
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.entry-meta {
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+}
+
+.entry ul {
+  margin-top: var(--space-tight);
+  padding-left: 1.1em;
+}
+
+.entry li + li {
+  margin-top: var(--space-list-item);
+}
+
+.entry li::marker {
+  color: var(--color-text-secondary);
+}
+
+/* ---------- Skills ---------- */
+
+.skills > div + div {
+  margin-top: var(--space-tight);
+}
+
+.skills dt {
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  margin-top: var(--space-section);
+  padding-block: var(--space-section-inner) var(--space-section);
+  border-top: var(--rule-width) solid var(--color-rule);
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+}
+
+.site-footer .row-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: var(--column-gap);
+}
