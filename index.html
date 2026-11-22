@@ -250,9 +250,11 @@
                   audio, with a paid plan live in 3 weeks.
                 </li>
                 <li>
-                    Designed the schema across 20 migrations, with a single-
-                    statement quota check that is safe under concurrency.
-                  </li>
+                  Kept synthesis to 10–20 seconds and about $0.005 per
+                  8,000-character article by sending 2,000-character chunks to
+                  the speech API 4 at a time, cancelling the rest when one
+                  fails to stop paying for a failed job.
+                </li>
                 <li>
                     Built a job executor with leased claims, so jobs survive
                     container sleep without being lost or run twice.
