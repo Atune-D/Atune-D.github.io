@@ -217,10 +217,11 @@
               </p>
               <ul>
                 <li>
-                  Conducted a feasibility study on embedding optical fibres in
-                  wood to sense touch, analyzing about 250 microscope
-                  measurements across laser power, speed, and thickness.
-                </li>
+                    Tested whether conductors inserted into laser-drilled holes
+                    could make wood touch-sensitive, analyzing about 250
+                    microscope measurements across laser power, speed, and
+                    thickness.
+                  </li>
                 <li>
                   Traced non-reproducible hole sizes to laser-tube power decay
                   and documented the failure modes.
@@ -249,17 +250,18 @@
                   audio, with a paid plan live in 3 weeks.
                 </li>
                 <li>
-                  Designed the database schema across 20 migrations, including
-                  a race-free quota check in a single SQL statement.
-                </li>
+                    Designed the schema across 20 migrations, with a single-
+                    statement quota check that is safe under concurrency.
+                  </li>
                 <li>
-                  Implemented a job executor that resumes after container
-                  sleep, using leased claims with a guard on every write.
-                </li>
+                    Built a job executor with leased claims, so jobs survive
+                    container sleep without being lost or run twice.
+                  </li>
                 <li>
-                  Wrote unit and integration tests (149 test files) that run
-                  against local database and storage emulation.
-                </li>
+                    Wrote 149 test files on local SQLite, including
+                    deterministic race tests that two executors never run one
+                    job.
+                  </li>
               </ul>
             </article>
 
@@ -273,13 +275,13 @@
               <p class="entry-meta">Swift, React, Hono, Zod</p>
               <ul>
                 <li>
-                  Built mobile-first workout logging and metrics views in
-                  React, from Figma prototype to production.
-                </li>
+                    Designed the frontend and built the iOS app in Swift, from
+                    Figma prototype to production.
+                  </li>
                 <li>
-                  Integrated Whisper speech transcription with confidence
-                  thresholds and timestamp alignment.
-                </li>
+                    Integrated Whisper, asking users to re-record below 70%
+                    confidence so misheard sets are never logged.
+                  </li>
               </ul>
             </article>
           </div>
