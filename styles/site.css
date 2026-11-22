@@ -317,32 +317,6 @@ a:hover {
   color: var(--color-text-secondary);
 }
 
-/* ---------- Certifications ---------- */
-
-.certs {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.certs li {
-  display: flex;
-  flex-direction: column;
-}
-
-.certs li + li {
-  margin-top: var(--space-tight);
-}
-
-.cert-name {
-  font-weight: var(--weight-medium);
-}
-
-.cert-issuer {
-  font-size: var(--text-small);
-  color: var(--color-text-secondary);
-}
-
 /* ---------- Footer ---------- */
 
 .site-footer {
