@@ -161,8 +161,8 @@
                   live systems with no raw sales data leaving the store.
                 </li>
                 <li>
-                  Implemented idempotent, versioned batch writes so retries and
-                  lost responses never double-post.
+                  Designed idempotent, versioned batch writes so retries after a
+                  lost response never post duplicate financial entries.
                 </li>
               </ul>
             </article>
@@ -185,17 +185,18 @@
                   large, noisy mailboxes.
                 </li>
                 <li>
-                  Built Python and TypeScript pipelines that parse, thread,
-                  deduplicate, and normalize email from multiple providers
-                  before indexing.
+                  Built Python and TypeScript pipelines that normalize email
+                  from multiple providers into one schema, then thread and
+                  deduplicate it so search returns each conversation once and
+                  each message is embedded only once.
                 </li>
                 <li>
-                  Developed REST APIs in Python (Masonite) on PostgreSQL, using
-                  Redis for asynchronous processing.
+                  Moved slow mailbox sync and OpenAI calls into Redis jobs with
+                  retries, keeping Masonite REST APIs responsive.
                 </li>
                 <li>
-                  Wrote CLI tools and validation scripts to check data quality
-                  and speed up debugging.
+                  Built a synthetic email generator and thread-validation
+                  scripts to reproduce data bugs without real customer email.
                 </li>
                 <li>
                   Wrote API documentation and setup guides that let new
